@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 70" width="64" height="70">
+  <defs>
+    <clipPath id="gable-mini-clip">
+      <polygon points="6,29 32,6 58,29 58,64 6,64" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#gable-mini-clip)">
+    <rect x="0" y="0" width="64" height="70" fill="#F4F5F6" />
+    <polygon points="31,14 58,28 58,40 31,28" fill="#C2691A" />
+    <path d="M 4 38 L 28 16 L 60 36 L 60 66 L 4 66 Z" fill="#3D6E9E" />
+    <g transform="translate(20, 21) scale(0.36)">
+      <path d="M1.8 0.0 L11.7 0.0 L11.7 14.6 L15.0 18.6 L15.0 22.6 L19.2 24.9 L22.7 29.6 L26.7 33.7 L28.9 33.4 L27.5 39.3 L27.7 44.7 L32.0 47.9 L34.2 48.6 L35.2 53.6 L37.7 56.4 L39.7 60.3 L42.3 65.0 L44.0 65.7 L48.5 65.0 L53.8 64.3 L57.6 63.6 L58.5 60.7 L61.8 64.3 L61.8 100.0 L1.9 100.0 L1.9 74.3 L3.0 70.0 L0.0 67.1 L0.2 64.7 L3.7 57.1 L5.3 53.3 L7.6 48.6 L4.4 44.6 L3.0 42.9 L2.4 40.0 L1.8 36.9Z" fill="#F4F5F6"/>
+    </g>
+  </g>
+  <polygon points="5,28 32,5 59,28 59,65 5,65" fill="none" stroke="#1F2A2E" stroke-width="4.5" stroke-linejoin="miter" />
+</svg>

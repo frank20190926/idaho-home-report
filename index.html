@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1376, initial-scale=1.0" />
+  <title>The Idaho Home Report — Direction C+ Cartographic Publication Identity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --big-sky: #3D6E9E;
+      --big-sky-dark: #2A527A;
+      --big-sky-tint: #DCE7F2;
+      --sunset: #C2691A;
+      --sage: #8A9A7B;
+      --basalt: #1F2A2E;
+      --slate: #55616A;
+      --snow: #F4F5F6;
+      --mist: #E8EBEE;
+      --rule: #CDD3D8;
+      --white: #FFFFFF;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: #141B1E;
+      font-family: var(--sans);
+      color: var(--basalt);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 20px;
+    }
+
+    .board {
+      width: 1376px;
+      height: 768px;
+      position: relative;
+      overflow: hidden;
+      background-size: 1376px 768px;
+      background-position: center;
+      background-repeat: no-repeat;
+      user-select: none;
+    }
+
+    #board-1 {
+      background-image: url('assets/idaho_cplus_base_clean.jpg');
+    }
+
+    #board-2 {
+      background-image: url('assets/idaho_cplus_board2_bg.jpg');
+    }
+
+    .tnum {
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =====================================================================
+       SVG DEFINITIONS: DIRECTION C+ CARTOGRAPHIC RIDGE-GABLE MARKS
+       ===================================================================== -->
+  <svg width="0" height="0" style="position:absolute;">
+    <defs>
+      <!-- Clip path for interior of Primary Gable Shelter (viewBox 0 0 200 220) -->
+      <clipPath id="gable-interior-clip">
+        <polygon points="16,90 100,15 184,90 184,204 16,204" />
+      </clipPath>
+
+      <!-- Clip path for small simplified 24px/16px icon (viewBox 0 0 64 70) -->
+      <clipPath id="gable-mini-clip">
+        <polygon points="6,29 32,6 58,29 58,64 6,64" />
+      </clipPath>
+
+      <!-- PRIMARY C+ MARK: Gable Shelter + Sculpted Asymmetric USGS Topographic Ridge (viewBox 0 0 200 220)
+           Outer architectural pentagon = The Home; Interior asymmetric topographic contours = The Mountain Ridgeline.
+           Strictly ONE Sunset Orange (#C2691A) eastern ridge sun-crest spark, zero bullseye/eye illusion,
+           100% faithful to Direction C's organic topographic contour flow. -->
+      <g id="mark-cplus-primary">
+        <!-- Interior Clipped Topographic Strata & Contours -->
+        <g clip-path="url(#gable-interior-clip)">
+          <!-- Snow Sky Ground inside upper gable -->
+          <rect x="0" y="0" width="200" height="220" fill="#F4F5F6" />
+
+          <!-- Delicate Upper Sky Topographic Contours (matching Direction C's upper gable contour flow) -->
+          <path d="M 8 92 C 44 60, 74 28, 96 26 C 120 24, 152 56, 192 88" fill="none" stroke="#3D6E9E" stroke-width="2" stroke-opacity="0.30" />
+          <path d="M 8 105 C 46 70, 74 38, 95 36 C 120 34, 150 66, 192 99" fill="none" stroke="#3D6E9E" stroke-width="2.4" stroke-opacity="0.50" />
+
+          <!-- THE ONE SPARK: SUNSET ORANGE (#C2691A) Eastern Alpine Sun-Crest Facet -->
+          <path d="M 93 46 C 116 44, 144 70, 192 108 L 192 134 L 93 92 Z" fill="#C2691A" />
+          <path d="M 93 46 C 116 44, 144 70, 192 108" fill="none" stroke="#F4F5F6" stroke-width="3.2" />
+
+          <!-- STRATUM 1: Primary Sawtooth Ridge in BIG SKY BLUE (#3D6E9E) -->
+          <path d="M 8 124 C 42 92, 66 50, 91 48 C 116 46, 142 86, 192 122 L 192 212 L 8 212 Z" fill="#3D6E9E" />
+          <path d="M 8 124 C 42 92, 66 50, 91 48 C 116 46, 142 86, 192 122" fill="none" stroke="#F4F5F6" stroke-width="3.5" />
+
+          <!-- Flowing Asymmetric USGS Index Contours across the Big Sky Ridge (Exact Direction C flow) -->
+          <path d="M 8 140 C 44 110, 66 64, 90 62 C 115 60, 140 100, 192 136" fill="none" stroke="#F4F5F6" stroke-width="2.8" />
+          <path d="M 8 156 C 46 128, 66 78, 89 75 C 114 72, 138 114, 192 150" fill="none" stroke="#DCE7F2" stroke-width="2.6" />
+          <path d="M 8 172 C 48 146, 66 94, 88 90 C 112 86, 136 128, 192 164" fill="none" stroke="#F4F5F6" stroke-width="2.8" />
+
+          <!-- Asymmetric Topographic Ridge Crest Loop (Organic cartographic kidney-ridge contour, NOT a round target) -->
+          <path d="M 68 122 C 65 104, 76 86, 90 84 C 103 82, 112 96, 108 114 C 104 128, 92 136, 80 134 C 71 132, 69 128, 68 122 Z" fill="#2A527A" stroke="#F4F5F6" stroke-width="2.8" />
+          <path d="M 78 118 C 76 107, 83 96, 91 95 C 98 94, 102 103, 99 113 C 96 121, 89 125, 83 123 C 79 122, 79 120, 78 118 Z" fill="none" stroke="#DCE7F2" stroke-width="2.4" />
+
+          <!-- STRATUM 2: Mid-Mountain Topographic Basin (#2A527A) -->
+          <path d="M 8 184 C 46 162, 68 144, 95 148 C 122 152, 148 152, 192 176 L 192 212 L 8 212 Z" fill="#2A527A" />
+          <path d="M 8 184 C 46 162, 68 144, 95 148 C 122 152, 148 152, 192 176" fill="none" stroke="#F4F5F6" stroke-width="3" />
+
+          <!-- STRATUM 3: Basalt Foothill Base (#1F2A2E) -->
+          <path d="M 8 197 C 46 178, 72 164, 102 170 C 132 176, 158 176, 192 192 L 192 212 L 8 212 Z" fill="#1F2A2E" />
+          <path d="M 8 197 C 46 178, 72 164, 102 170 C 132 176, 158 176, 192 192" fill="none" stroke="#DCE7F2" stroke-width="2.6" />
+        </g>
+
+        <!-- Bold Architectural Gable Shelter Outer Frame (Basalt #1F2A2E) -->
+        <polygon points="12,88 100,10 188,88 188,206 12,206" fill="none" stroke="#1F2A2E" stroke-width="8" stroke-linejoin="miter" />
+      </g>
+
+      <!-- SIMPLIFIED SMALL-SCALE MARK (24px / 16px Trail-Sign Stamp, viewBox 0 0 64 70):
+           Drops thin contour lines so 3 bold flat topographic strata read with 100% clarity at 16px -->
+      <g id="mark-cplus-mini">
+        <g clip-path="url(#gable-mini-clip)">
+          <rect x="0" y="0" width="64" height="70" fill="#F4F5F6" />
+          <!-- Single Sunset Eastern Ridge Spark -->
+          <polygon points="30,14 58,28 58,42 30,30" fill="#C2691A" />
+          <!-- Big Sky Primary Ridge -->
+          <path d="M 4 42 C 16 28, 24 18, 31 18 C 39 18, 48 30, 60 40 L 60 66 L 4 66 Z" fill="#3D6E9E" />
+          <path d="M 4 42 C 16 28, 24 18, 31 18 C 39 18, 48 30, 60 40" fill="none" stroke="#F4F5F6" stroke-width="2.4" />
+          <!-- Single crisp white contour wave inside Big Sky Ridge -->
+          <path d="M 6 49 C 18 36, 25 28, 31 28 C 38 28, 47 38, 58 47" fill="none" stroke="#F4F5F6" stroke-width="2.2" />
+          <!-- Basalt Base -->
+          <path d="M 4 56 Q 22 46 34 48 Q 46 50 60 56 L 60 66 L 4 66 Z" fill="#1F2A2E" />
+          <path d="M 4 56 Q 22 46 34 48 Q 46 50 60 56" fill="none" stroke="#F4F5F6" stroke-width="2.2" />
+        </g>
+        <polygon points="5,28 32,5 59,28 59,65 5,65" fill="none" stroke="#1F2A2E" stroke-width="4.5" stroke-linejoin="miter" />
+      </g>
+
+      <!-- ROUTE C+2: IDAHO SILHOUETTE NEGATIVE-SPACE CUTOUT MARK (viewBox 0 0 64 70)
+           Uses the Employer's exact 36-vertex simplified Idaho polygon carved out as white space -->
+      <g id="mark-cplus-idaho">
+        <g clip-path="url(#gable-mini-clip)">
+          <rect x="0" y="0" width="64" height="70" fill="#F4F5F6" />
+          <polygon points="31,14 58,28 58,40 31,28" fill="#C2691A" />
+          <path d="M 4 38 L 28 16 L 60 36 L 60 66 L 4 66 Z" fill="#3D6E9E" />
+          <!-- Employer's 36-vertex Idaho state silhouette carved as crisp Snow negative space -->
+          <g transform="translate(20, 21) scale(0.36)">
+            <path d="M1.8 0.0 L11.7 0.0 L11.7 14.6 L15.0 18.6 L15.0 22.6 L19.2 24.9 L22.7 29.6 L26.7 33.7 L28.9 33.4 L27.5 39.3 L27.7 44.7 L32.0 47.9 L34.2 48.6 L35.2 53.6 L37.7 56.4 L39.7 60.3 L42.3 65.0 L44.0 65.7 L48.5 65.0 L53.8 64.3 L57.6 63.6 L58.5 60.7 L61.8 64.3 L61.8 100.0 L1.9 100.0 L1.9 74.3 L3.0 70.0 L0.0 67.1 L0.2 64.7 L3.7 57.1 L5.3 53.3 L7.6 48.6 L4.4 44.6 L3.0 42.9 L2.4 40.0 L1.8 36.9Z" fill="#F4F5F6"/>
+          </g>
+        </g>
+        <polygon points="5,28 32,5 59,28 59,65 5,65" fill="none" stroke="#1F2A2E" stroke-width="4.5" stroke-linejoin="miter" />
+      </g>
+    </defs>
+  </svg>
+
+  <!-- =====================================================================
+       BOARD 01: DIRECTION C+ CARTOGRAPHIC FIELD GUIDE & IDENTITY SYSTEM
+       ===================================================================== -->
+  <div class="board" id="board-1">
+
+    <!-- 1. TOP-LEFT SUBTLE EDITORIAL FOLIO TAG (Floating cleanly on paper margin) -->
+    <div style="position:absolute; left:42px; top:28px; display:flex; align-items:center; gap:10px; background:rgba(244,245,246,0.88); padding:5px 12px; border:1px solid #CDD3D8;">
+      <span style="width:7px; height:7px; border-radius:50%; background:var(--sunset); display:inline-block;"></span>
+      <span style="font-family:var(--mono); font-size:10px; font-weight:600; letter-spacing:0.1em; color:var(--basalt);">01 / BRAND IDENTITY &amp; CARTOGRAPHIC SYSTEM</span>
+      <span style="color:#CDD3D8;">|</span>
+      <span style="font-family:var(--sans); font-size:10.5px; font-weight:600; color:var(--big-sky);">The Idaho Home Report</span>
+    </div>
+
+    <!-- 2. CENTERPIECE: DIRECTION C+ LOCKUP + VIEWFINDER TICKS + FRAUNCES SERIF MASTHEAD -->
+    <div style="position:absolute; left:488px; top:188px; width:400px; display:flex; flex-direction:column; align-items:center;">
+
+      <!-- Lockup Stage with Corner Viewfinder Ticks & Vertical Coordinates -->
+      <div style="position:relative; width:300px; height:242px; display:flex; align-items:center; justify-content:center;">
+        <!-- Top-Left Viewfinder Bracket (Basalt #1F2A2E) -->
+        <svg width="28" height="28" viewBox="0 0 28 28" style="position:absolute; left:10px; top:4px;">
+          <path d="M 2 26 L 2 2 L 26 2" fill="none" stroke="#1F2A2E" stroke-width="2.6" />
+        </svg>
+        <!-- Top-Right Viewfinder Bracket (Big Sky #3D6E9E) -->
+        <svg width="28" height="28" viewBox="0 0 28 28" style="position:absolute; right:10px; top:4px;">
+          <path d="M 2 2 L 26 2 L 26 26" fill="none" stroke="#3D6E9E" stroke-width="2.6" />
+        </svg>
+
+        <!-- Left Vertical Coordinate (Basalt #1F2A2E) -->
+        <div style="position:absolute; left:-64px; top:126px; transform:rotate(-90deg); transform-origin:center; font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--basalt); white-space:nowrap;" class="tnum">
+          44.0682° N, 114.7420° W
+        </div>
+
+        <!-- Right Vertical Coordinate (Big Sky #3D6E9E) -->
+        <div style="position:absolute; right:-64px; top:126px; transform:rotate(90deg); transform-origin:center; font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--big-sky); white-space:nowrap;" class="tnum">
+          44.0682° N, 114.7420° W
+        </div>
+
+        <!-- Center Gable-Contour Emblem (200 x 220) -->
+        <svg width="204" height="224" viewBox="0 0 200 220" style="filter: drop-shadow(0 8px 18px rgba(31,42,46,0.06));">
+          <use href="#mark-cplus-primary" />
+        </svg>
+      </div>
+
+      <!-- Primary Publication Masthead in Warm Editorial Serif (Fraunces, Mixed-Case, Zero Tagline) -->
+      <div style="margin-top:12px; text-align:center;">
+        <div style="display:inline-flex; align-items:center; gap:8px; margin-bottom:4px;">
+          <span style="width:18px; height:2px; background:var(--sunset);"></span>
+          <span style="font-family:var(--mono); font-size:9.5px; font-weight:600; letter-spacing:0.14em; color:var(--big-sky); text-transform:uppercase;">PRIMARY PUBLICATION MASTHEAD · FRAUNCES SERIF</span>
+          <span style="width:18px; height:2px; background:var(--sunset);"></span>
+        </div>
+        <h1 style="font-family:var(--serif); font-size:47px; font-weight:600; line-height:0.98; letter-spacing:-0.028em; color:var(--basalt);">
+          The Idaho<br/>Home Report
+        </h1>
+      </div>
+
+      <!-- Compact Scale Test & Brand Spec Strip (24px / 16px / Reversed / Idaho Cutout / Palette) -->
+      <div style="margin-top:20px; width:396px; border-top:1.5px solid var(--basalt); border-bottom:1px solid var(--rule); padding:10px 4px; display:flex; align-items:center; justify-content:space-between; background:rgba(244,245,246,0.75);">
+        <!-- 24px & 16px Trail-Sign Stamp Proof -->
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div style="display:flex; align-items:flex-end; gap:6px;">
+            <div style="text-align:center;">
+              <svg width="26" height="28" viewBox="0 0 64 70"><use href="#mark-cplus-mini"/></svg>
+              <div style="font-family:var(--mono); font-size:7.5px; font-weight:600; color:var(--slate); margin-top:1px;">24px</div>
+            </div>
+            <div style="text-align:center;">
+              <svg width="17" height="19" viewBox="0 0 64 70"><use href="#mark-cplus-mini"/></svg>
+              <div style="font-family:var(--mono); font-size:7.5px; font-weight:600; color:var(--slate); margin-top:1px;">16px</div>
+            </div>
+            <!-- Idaho Cutout Option -->
+            <div style="text-align:center; margin-left:2px;">
+              <svg width="26" height="28" viewBox="0 0 64 70"><use href="#mark-cplus-idaho"/></svg>
+              <div style="font-family:var(--mono); font-size:7.5px; font-weight:600; color:var(--big-sky); margin-top:1px;">ID Cut</div>
+            </div>
+            <!-- Reversed Dark Tile -->
+            <div style="text-align:center; margin-left:2px;">
+              <div style="width:28px; height:28px; background:var(--basalt); border-radius:3px; display:flex; align-items:center; justify-content:center;">
+                <svg width="20" height="22" viewBox="0 0 64 70">
+                  <polygon points="6,28 32,6 58,28 58,64 6,64" fill="#3D6E9E" stroke="#F4F5F6" stroke-width="5"/>
+                  <polygon points="30,14 56,27 56,38 30,27" fill="#C2691A"/>
+                  <path d="M 8 43 Q 24 30 32 30 Q 44 30 56 41" fill="none" stroke="#F4F5F6" stroke-width="2.5"/>
+                  <path d="M 8 53 Q 24 44 34 46 Q 46 48 56 54" fill="none" stroke="#F4F5F6" stroke-width="2.5"/>
+                </svg>
+              </div>
+              <div style="font-family:var(--mono); font-size:7.5px; font-weight:600; color:var(--slate); margin-top:1px;">Dark</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="width:1px; height:32px; background:var(--rule);"></div>
+
+        <!-- Official Palette Swatches -->
+        <div style="display:flex; align-items:center; gap:7px;">
+          <div style="text-align:center;">
+            <div style="width:20px; height:20px; border-radius:50%; background:#3D6E9E; border:1px solid rgba(31,42,46,0.15); margin:0 auto;"></div>
+            <div style="font-family:var(--mono); font-size:7.5px; font-weight:600; color:var(--basalt); margin-top:2px;">#3D6E9E</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="width:20px; height:20px; border-radius:50%; background:#C2691A; border:1px solid rgba(31,42,46,0.15); margin:0 auto;"></div>
+            <div style="font-family:var(--mono); font-size:7.5px; font-weight:600; color:var(--sunset); margin-top:2px;">#C2691A</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="width:20px; height:20px; border-radius:50%; background:#1F2A2E; margin:0 auto;"></div>
+            <div style="font-family:var(--mono); font-size:7.5px; font-weight:600; color:var(--basalt); margin-top:2px;">#1F2A2E</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="width:20px; height:20px; border-radius:50%; background:#8A9A7B; margin:0 auto;"></div>
+            <div style="font-family:var(--mono); font-size:7.5px; font-weight:600; color:var(--slate); margin-top:2px;">#8A9A7B</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="width:20px; height:20px; border-radius:50%; background:#F4F5F6; border:1px solid #9AA4AC; margin:0 auto;"></div>
+            <div style="font-family:var(--mono); font-size:7.5px; font-weight:600; color:var(--slate); margin-top:2px;">#F4F5F6</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-caption explaining the C+ compliance (with clean paper backing so contour lines never cut through text) -->
+      <div style="margin-top:6px; font-family:var(--sans); font-size:10px; color:var(--slate); text-align:center; white-space:nowrap; background:rgba(244,245,246,0.92); padding:3px 10px; border-radius:2px;">
+        <strong style="color:var(--basalt);">Big Sky Blue</strong> leads · <strong style="color:var(--sunset);">Sunset Orange</strong> single spark · <strong style="color:var(--basalt);">Fraunces</strong> serif + <strong style="color:var(--basalt);">Figtree</strong> data sans
+      </div>
+    </div>
+
+    <!-- 3. TOP-RIGHT: WAYFINDING SIGN CAPTION & LASER-ETCHED BRUSHED ALUMINUM LOCKUP -->
+    <!-- Clean Caption to the left of the physical sign -->
+    <div style="position:absolute; left:750px; top:68px; width:192px; text-align:right;">
+      <div style="font-family:var(--serif); font-size:14.5px; font-weight:600; color:var(--basalt); letter-spacing:-0.01em;">Wayfinding Sign</div>
+      <div style="font-family:var(--sans); font-size:11.5px; color:var(--slate); line-height:1.35; margin-top:2px;">
+        Anodized aluminum &amp; riven<br/>Idaho basalt slate plaque
+      </div>
+      <div style="font-family:var(--mono); font-size:9px; font-weight:600; color:var(--big-sky); letter-spacing:0.06em; margin-top:4px;">
+        STATE PARK TRAILHEAD SPEC
+      </div>
+    </div>
+
+    <!-- Laser-Etched Lockup on the Brushed Anodized Aluminum Plate (x: 972..1302, y: 124..238) -->
+    <div style="position:absolute; left:972px; top:124px; width:330px; height:114px; display:flex; align-items:center; justify-content:center; gap:16px; padding:0 18px;">
+      <!-- Etched Emblem on Metal -->
+      <svg width="54" height="60" viewBox="0 0 200 220" style="filter: drop-shadow(0 1px 0 rgba(255,255,255,0.45)); opacity:0.92;">
+        <use href="#mark-cplus-primary" />
+      </svg>
+      <!-- Etched Vertical Divider -->
+      <div style="width:1.5px; height:52px; background:rgba(31,42,46,0.35); box-shadow:1px 0 0 rgba(255,255,255,0.4);"></div>
+      <!-- Etched Fraunces Serif Masthead on Brushed Aluminum -->
+      <div>
+        <div style="font-family:var(--mono); font-size:8.2px; font-weight:600; letter-spacing:0.12em; color:rgba(31,42,46,0.68); text-shadow:0 1px 0 rgba(255,255,255,0.45); margin-bottom:2px; white-space:nowrap;">
+          44.0682° N · TRAILHEAD BENCHMARK
+        </div>
+        <div style="font-family:var(--serif); font-size:27px; font-weight:600; line-height:1.0; letter-spacing:-0.02em; color:#F4F5F6; text-shadow: 0 -1px 1px rgba(20,28,32,0.55), 0 1.5px 2px rgba(20,28,32,0.35);">
+          The Idaho<br/>Home Report
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. BOTTOM-LEFT: FRAMELESS ELEVATION vs. HOUSING PRICE CROSS-SECTION PROFILE -->
+    <div style="position:absolute; left:38px; top:480px; width:426px; height:256px;">
+      <!-- Header -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px; white-space:nowrap;">
+        <div style="display:flex; align-items:baseline; gap:6px;">
+          <span style="font-family:var(--serif); font-size:15px; font-weight:600; color:var(--basalt);">Elevation vs. Median Price</span>
+          <span style="font-family:var(--mono); font-size:8.5px; font-weight:600; color:var(--big-sky);">5 BENCHMARKS</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px; font-family:var(--sans); font-size:9.5px; font-weight:600; color:var(--slate);">
+          <span style="display:inline-flex; align-items:center; gap:4px;"><i style="width:9px; height:3px; background:var(--big-sky); display:inline-block;"></i>Elevation (ft)</span>
+          <span style="display:inline-flex; align-items:center; gap:4px;"><i style="width:9px; height:3px; background:var(--sunset); display:inline-block;"></i>Price ($)</span>
+        </div>
+      </div>
+
+      <!-- Crisp Vector Cross-Section Chart sitting directly on the Snow Paper -->
+      <svg width="426" height="225" viewBox="0 0 426 225" style="overflow:visible;">
+        <defs>
+          <linearGradient id="elev-fill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3D6E9E" stop-opacity="0.58" />
+            <stop offset="75%" stop-color="#3D6E9E" stop-opacity="0.18" />
+            <stop offset="100%" stop-color="#3D6E9E" stop-opacity="0.02" />
+          </linearGradient>
+          <linearGradient id="price-fill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#C2691A" stop-opacity="0.24" />
+            <stop offset="100%" stop-color="#C2691A" stop-opacity="0.0" />
+          </linearGradient>
+        </defs>
+
+        <!-- Horizontal Reference Gridlines & Elevation Labels (ft) -->
+        <g font-family="Figtree, sans-serif" font-size="10" font-weight="600" fill="#55616A" text-anchor="end">
+          <text x="34" y="24">6,000</text>
+          <line x1="40" y1="20" x2="416" y2="20" stroke="#CDD3D8" stroke-width="0.8" />
+
+          <text x="34" y="52">5,000</text>
+          <line x1="40" y1="48" x2="416" y2="48" stroke="#CDD3D8" stroke-width="0.8" />
+
+          <text x="34" y="80">4,000</text>
+          <line x1="40" y1="76" x2="416" y2="76" stroke="#CDD3D8" stroke-width="0.8" />
+
+          <text x="34" y="108">3,000</text>
+          <line x1="40" y1="104" x2="416" y2="104" stroke="#CDD3D8" stroke-width="0.8" />
+
+          <text x="34" y="136">2,000</text>
+          <line x1="40" y1="132" x2="416" y2="132" stroke="#CDD3D8" stroke-width="0.8" />
+
+          <text x="34" y="164">1,000</text>
+          <line x1="40" y1="160" x2="416" y2="160" stroke="#CDD3D8" stroke-width="0.8" />
+        </g>
+
+        <!-- Mountain Elevation Cross-Section Silhouette (Big Sky Blue #3D6E9E)
+             Towns: Boise (x=82, 2730ft->y=111), Sun Valley (x=156, 5920ft->y=26),
+             Twin Falls (x=232, 3745ft->y=83), Idaho Falls (x=306, 4705ft->y=56),
+             Sandpoint (x=380, 2103ft->y=129) -->
+        <path d="M 40 162 L 58 148 L 82 111 L 106 88 L 128 54 L 156 26 L 184 58 L 208 72 L 232 83 L 266 76 L 288 66 L 306 56 L 336 86 L 358 112 L 380 129 L 402 152 L 416 164 L 416 178 L 40 178 Z" fill="url(#elev-fill)" />
+        <path d="M 40 162 L 58 148 L 82 111 L 106 88 L 128 54 L 156 26 L 184 58 L 208 72 L 232 83 L 266 76 L 288 66 L 306 56 L 336 86 L 358 112 L 380 129 L 402 152 L 416 164" fill="none" stroke="#3D6E9E" stroke-width="2.4" stroke-linejoin="round" />
+
+        <!-- Housing Price Curve (Sunset Orange #C2691A)
+             Boise ($518k -> y=96), Sun Valley ($1.18M -> y=44), Twin Falls ($379k -> y=132),
+             Idaho Falls ($364k -> y=136), Sandpoint ($589k -> y=78) -->
+        <path d="M 40 156 C 58 148, 68 96, 82 96 C 108 96, 132 44, 156 44 C 184 44, 206 132, 232 132 C 258 132, 282 136, 306 136 C 334 136, 356 78, 380 78 C 396 78, 406 112, 416 124 L 416 178 L 40 178 Z" fill="url(#price-fill)" />
+        <path d="M 40 156 C 58 148, 68 96, 82 96 C 108 96, 132 44, 156 44 C 184 44, 206 132, 232 132 C 258 132, 282 136, 306 136 C 334 136, 356 78, 380 78 C 396 78, 406 112, 416 124" fill="none" stroke="#C2691A" stroke-width="2.2" />
+
+        <!-- Vertical Dashed Callout Lines & Town Marker Pins -->
+        <!-- 1. Boise -->
+        <line x1="82" y1="82" x2="82" y2="178" stroke="#1F2A2E" stroke-width="1.2" stroke-dasharray="3,3" />
+        <circle cx="82" cy="76" r="8.5" fill="#1F2A2E" stroke="#F4F5F6" stroke-width="1.5" />
+        <circle cx="82" cy="96" r="3.5" fill="#C2691A" stroke="#F4F5F6" stroke-width="1" />
+        <text x="82" y="61" font-family="Figtree, sans-serif" font-size="11" font-weight="700" fill="#1F2A2E" text-anchor="middle">Boise</text>
+
+        <!-- 2. Sun Valley -->
+        <line x1="156" y1="26" x2="156" y2="178" stroke="#1F2A2E" stroke-width="1.2" stroke-dasharray="3,3" />
+        <circle cx="156" cy="20" r="8.5" fill="#3D6E9E" stroke="#F4F5F6" stroke-width="1.5" />
+        <circle cx="156" cy="44" r="4" fill="#C2691A" stroke="#F4F5F6" stroke-width="1.2" />
+        <text x="156" y="6" font-family="Figtree, sans-serif" font-size="11" font-weight="700" fill="#1F2A2E" text-anchor="middle">Sun Valley</text>
+
+        <!-- 3. Twin Falls -->
+        <line x1="232" y1="74" x2="232" y2="178" stroke="#1F2A2E" stroke-width="1.2" stroke-dasharray="3,3" />
+        <circle cx="232" cy="68" r="8.5" fill="#3D6E9E" stroke="#F4F5F6" stroke-width="1.5" />
+        <circle cx="232" cy="132" r="3.5" fill="#C2691A" stroke="#F4F5F6" stroke-width="1" />
+        <text x="232" y="53" font-family="Figtree, sans-serif" font-size="11" font-weight="700" fill="#1F2A2E" text-anchor="middle">Twin Falls</text>
+
+        <!-- 4. Idaho Falls -->
+        <line x1="306" y1="48" x2="306" y2="178" stroke="#1F2A2E" stroke-width="1.2" stroke-dasharray="3,3" />
+        <circle cx="306" cy="42" r="8.5" fill="#3D6E9E" stroke="#F4F5F6" stroke-width="1.5" />
+        <circle cx="306" cy="136" r="3.5" fill="#C2691A" stroke="#F4F5F6" stroke-width="1" />
+        <text x="306" y="27" font-family="Figtree, sans-serif" font-size="11" font-weight="700" fill="#1F2A2E" text-anchor="middle">Idaho Falls</text>
+
+        <!-- 5. Sandpoint -->
+        <line x1="380" y1="68" x2="380" y2="178" stroke="#1F2A2E" stroke-width="1.2" stroke-dasharray="3,3" />
+        <circle cx="380" cy="62" r="8.5" fill="#3D6E9E" stroke="#F4F5F6" stroke-width="1.5" />
+        <circle cx="380" cy="78" r="3.5" fill="#C2691A" stroke="#F4F5F6" stroke-width="1" />
+        <text x="380" y="47" font-family="Figtree, sans-serif" font-size="11" font-weight="700" fill="#1F2A2E" text-anchor="middle">Sandpoint</text>
+
+        <!-- Bold L-Axis Frame -->
+        <polyline points="40,12 40,178 418,178" fill="none" stroke="#1F2A2E" stroke-width="1.8" />
+
+        <!-- Bottom Tabular Data Readout under each Benchmark Town (100% Real Figures) -->
+        <g font-family="Figtree, sans-serif" text-anchor="middle">
+          <text x="82" y="194" font-size="10.5" font-weight="700" fill="#1F2A2E">$518k</text>
+          <text x="82" y="206" font-size="9" font-weight="500" fill="#55616A">2,730 ft</text>
+
+          <text x="156" y="194" font-size="10.5" font-weight="700" fill="#C2691A">$1.18M</text>
+          <text x="156" y="206" font-size="9" font-weight="500" fill="#55616A">5,920 ft</text>
+
+          <text x="232" y="194" font-size="10.5" font-weight="700" fill="#1F2A2E">$379k</text>
+          <text x="232" y="206" font-size="9" font-weight="500" fill="#55616A">3,745 ft</text>
+
+          <text x="306" y="194" font-size="10.5" font-weight="700" fill="#1F2A2E">$364k</text>
+          <text x="306" y="206" font-size="9" font-weight="500" fill="#55616A">4,705 ft</text>
+
+          <text x="380" y="194" font-size="10.5" font-weight="700" fill="#1F2A2E">$589k</text>
+          <text x="380" y="206" font-size="9" font-weight="500" fill="#55616A">2,103 ft</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- 5. BOTTOM-RIGHT: OPEN "POCKET FIELD GUIDE" SPREAD (100% CRISP VECTOR TEXT ON REAL BOOK PAGES) -->
+    <!-- Left Page (x: 965..1113, y: 422..696) -->
+    <div style="position:absolute; left:965px; top:423px; width:148px; height:273px; display:flex; flex-direction:column; justify-content:space-between;">
+      <!-- Top Header above the photorealistic Idaho Relief Map -->
+      <div style="display:flex; justify-content:space-between; align-items:baseline;">
+        <span style="font-family:var(--serif); font-size:10px; font-weight:600; color:var(--basalt);">Pocket Field Guide</span>
+        <span style="font-family:var(--mono); font-size:7.5px; font-weight:600; color:var(--big-sky);">ID · Q3</span>
+      </div>
+
+      <!-- Subtle Vector Callout Pins overlaid on the existing Idaho Map (y: 440..539) -->
+      <div style="position:relative; height:100px; width:100%;">
+        <!-- Boise pin on map -->
+        <div style="position:absolute; left:34px; top:66px; display:flex; align-items:center; gap:3px;">
+          <span style="width:5px; height:5px; border-radius:50%; background:var(--sunset); border:1px solid #fff; display:inline-block;"></span>
+          <span style="font-family:var(--sans); font-size:7px; font-weight:700; color:var(--basalt); background:rgba(244,245,246,0.85); padding:0 2px;">Boise</span>
+        </div>
+        <!-- Sun Valley pin on map -->
+        <div style="position:absolute; left:72px; top:62px; display:flex; align-items:center; gap:3px;">
+          <span style="width:5px; height:5px; border-radius:50%; background:var(--big-sky); border:1px solid #fff; display:inline-block;"></span>
+          <span style="font-family:var(--sans); font-size:7px; font-weight:700; color:var(--basalt); background:rgba(244,245,246,0.85); padding:0 2px;">Sun Valley</span>
+        </div>
+        <!-- Sandpoint pin on map -->
+        <div style="position:absolute; left:26px; top:12px; display:flex; align-items:center; gap:3px;">
+          <span style="width:4.5px; height:4.5px; border-radius:50%; background:var(--big-sky); border:1px solid #fff; display:inline-block;"></span>
+          <span style="font-family:var(--sans); font-size:6.8px; font-weight:700; color:var(--basalt); background:rgba(244,245,246,0.85); padding:0 2px;">North ID</span>
+        </div>
+      </div>
+
+      <!-- Bottom Half of Left Book Page: Legends & Waypoints (y: 545..696) -->
+      <div style="padding-top:2px;">
+        <div style="font-family:var(--serif); font-size:9px; font-weight:600; color:var(--basalt); border-bottom:1px solid #1F2A2E; padding-bottom:2px; margin-bottom:5px;">
+          Cartographic Legend
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3px 6px; font-family:var(--sans); font-size:6.8px; color:var(--slate); margin-bottom:8px;">
+          <div style="display:flex; align-items:center; gap:4px;"><span style="width:12px; height:2px; background:var(--big-sky); display:inline-block;"></span>Primary Ridge</div>
+          <div style="display:flex; align-items:center; gap:4px;"><span style="width:6px; height:6px; border:1px solid var(--basalt); display:inline-block;"></span>County Seat</div>
+          <div style="display:flex; align-items:center; gap:4px;"><span style="width:12px; height:1px; background:var(--slate); display:inline-block;"></span>250 ft Contour</div>
+          <div style="display:flex; align-items:center; gap:4px;"><span style="width:6px; height:6px; border-radius:50%; background:var(--big-sky); display:inline-block;"></span>MLS Market</div>
+          <div style="display:flex; align-items:center; gap:4px;"><span style="width:12px; height:1px; border-top:1px dashed var(--basalt); display:inline-block;"></span>Watershed Line</div>
+          <div style="display:flex; align-items:center; gap:4px;"><span style="width:6px; height:6px; border-radius:50%; background:var(--sunset); display:inline-block;"></span>Price Spike</div>
+          <div style="display:flex; align-items:center; gap:4px;"><span style="width:12px; height:2px; background:var(--sage); display:inline-block;"></span>Valley Floor</div>
+          <div style="display:flex; align-items:center; gap:4px;"><span style="font-family:var(--mono); font-size:6.5px; font-weight:700; color:var(--basalt);">44</span> Counties</div>
+        </div>
+
+        <div style="font-family:var(--serif); font-size:9px; font-weight:600; color:var(--basalt); border-bottom:1px solid #1F2A2E; padding-bottom:2px; margin-bottom:5px;">
+          Waypoints &amp; Signals
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div style="font-family:var(--sans); font-size:6.8px; color:var(--slate); line-height:1.45;">
+            <div><span style="color:var(--sunset); font-weight:700;">●</span> High-Country Premium (&gt;$800k)</div>
+            <div><span style="color:var(--big-sky); font-weight:700;">●</span> Treasure Valley Benchmark</div>
+            <div><span style="color:var(--sage); font-weight:700;">●</span> Magic Valley Price Cut Zone</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:5px; background:rgba(194,105,26,0.08); padding:4px 6px; border-radius:3px;">
+            <span style="width:11px; height:11px; border-radius:50%; background:var(--sunset); display:inline-block;"></span>
+            <div style="font-family:var(--sans); font-size:6.3px; font-weight:600; color:var(--basalt); line-height:1.2;">
+              Sunset<br/>Spark
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:6px; font-family:var(--mono); font-size:7px; color:var(--slate);">14 · FIELD EDITION</div>
+      </div>
+    </div>
+
+    <!-- Right Page (x: 1146..1296, y: 423..696) -->
+    <div style="position:absolute; left:1146px; top:423px; width:150px; height:273px; display:flex; flex-direction:column; justify-content:space-between;" class="tnum">
+      <!-- Table 1: Northern & Central Idaho Markets -->
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:3px;">
+          <span style="font-family:var(--serif); font-size:9.5px; font-weight:600; color:var(--basalt);">North &amp; Central Data</span>
+          <span style="font-family:var(--mono); font-size:6.8px; color:var(--slate);">MEDIAN · YOY</span>
+        </div>
+        <table style="width:100%; border-collapse:collapse; font-family:var(--sans); font-size:6.8px;">
+          <thead>
+            <tr style="background:var(--basalt); color:#F4F5F6; text-align:left;">
+              <th style="padding:2.5px 4px; font-weight:600;">Market</th>
+              <th style="padding:2.5px 3px; font-weight:600; text-align:right;">Price</th>
+              <th style="padding:2.5px 3px; font-weight:600; text-align:right;">YoY</th>
+              <th style="padding:2.5px 4px; font-weight:600; text-align:right;">Inc.</th>
+            </tr>
+          </thead>
+          <tbody style="color:var(--basalt);">
+            <tr style="border-bottom:0.5px solid #CDD3D8;">
+              <td style="padding:2.2px 4px; font-weight:600;">Boise · Ada</td>
+              <td style="padding:2.2px 3px; text-align:right;">$518k</td>
+              <td style="padding:2.2px 3px; text-align:right; color:var(--big-sky);">+1.4%</td>
+              <td style="padding:2.2px 4px; text-align:right;">$124k</td>
+            </tr>
+            <tr style="border-bottom:0.5px solid #CDD3D8; background:rgba(61,110,158,0.06);">
+              <td style="padding:2.2px 4px; font-weight:600;">Sandpoint</td>
+              <td style="padding:2.2px 3px; text-align:right;">$589k</td>
+              <td style="padding:2.2px 3px; text-align:right; color:var(--big-sky);">+3.1%</td>
+              <td style="padding:2.2px 4px; text-align:right;">$138k</td>
+            </tr>
+            <tr style="border-bottom:0.5px solid #CDD3D8;">
+              <td style="padding:2.2px 4px; font-weight:600;">Coeur d'Alene</td>
+              <td style="padding:2.2px 3px; text-align:right;">$545k</td>
+              <td style="padding:2.2px 3px; text-align:right; color:var(--big-sky);">+2.0%</td>
+              <td style="padding:2.2px 4px; text-align:right;">$129k</td>
+            </tr>
+            <tr style="border-bottom:0.5px solid #CDD3D8; background:rgba(61,110,158,0.06);">
+              <td style="padding:2.2px 4px; font-weight:600;">McCall · Valley</td>
+              <td style="padding:2.2px 3px; text-align:right;">$742k</td>
+              <td style="padding:2.2px 3px; text-align:right; color:var(--sunset);">+4.2%</td>
+              <td style="padding:2.2px 4px; text-align:right;">$168k</td>
+            </tr>
+            <tr style="border-bottom:0.5px solid #CDD3D8;">
+              <td style="padding:2.2px 4px; font-weight:600;">Moscow · Latah</td>
+              <td style="padding:2.2px 3px; text-align:right;">$412k</td>
+              <td style="padding:2.2px 3px; text-align:right; color:var(--big-sky);">+0.8%</td>
+              <td style="padding:2.2px 4px; text-align:right;">$99k</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--basalt);">
+              <td style="padding:2.2px 4px; font-weight:600;">Nampa · Canyon</td>
+              <td style="padding:2.2px 3px; text-align:right;">$408k</td>
+              <td style="padding:2.2px 3px; text-align:right; color:var(--slate);">-0.9%</td>
+              <td style="padding:2.2px 4px; text-align:right;">$98k</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Table 2: Southern & Eastern Snake River Plain -->
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:3px;">
+          <span style="font-family:var(--serif); font-size:9.5px; font-weight:600; color:var(--basalt);">Magic Valley &amp; East</span>
+          <span style="font-family:var(--mono); font-size:6.8px; color:var(--slate);">30-YR · 6.5%</span>
+        </div>
+        <table style="width:100%; border-collapse:collapse; font-family:var(--sans); font-size:6.8px;">
+          <thead>
+            <tr style="background:var(--basalt); color:#F4F5F6; text-align:left;">
+              <th style="padding:2.5px 4px; font-weight:600;">Market</th>
+              <th style="padding:2.5px 3px; font-weight:600; text-align:right;">Price</th>
+              <th style="padding:2.5px 3px; font-weight:600; text-align:right;">YoY</th>
+              <th style="padding:2.5px 4px; font-weight:600; text-align:right;">Pmt/m</th>
+            </tr>
+          </thead>
+          <tbody style="color:var(--basalt);">
+            <tr style="border-bottom:0.5px solid #CDD3D8; background:rgba(194,105,26,0.08);">
+              <td style="padding:2.2px 4px; font-weight:700; color:var(--sunset);">Sun Valley</td>
+              <td style="padding:2.2px 3px; text-align:right; font-weight:700;">$1.18M</td>
+              <td style="padding:2.2px 3px; text-align:right; color:var(--sunset);">+4.6%</td>
+              <td style="padding:2.2px 4px; text-align:right;">$6,890</td>
+            </tr>
+            <tr style="border-bottom:0.5px solid #CDD3D8;">
+              <td style="padding:2.2px 4px; font-weight:600;">Twin Falls</td>
+              <td style="padding:2.2px 3px; text-align:right;">$379k</td>
+              <td style="padding:2.2px 3px; text-align:right; color:var(--slate);">-1.8%</td>
+              <td style="padding:2.2px 4px; text-align:right;">$2,290</td>
+            </tr>
+            <tr style="border-bottom:0.5px solid #CDD3D8; background:rgba(61,110,158,0.06);">
+              <td style="padding:2.2px 4px; font-weight:600;">Idaho Falls</td>
+              <td style="padding:2.2px 3px; text-align:right;">$364k</td>
+              <td style="padding:2.2px 3px; text-align:right; color:var(--slate);">-0.6%</td>
+              <td style="padding:2.2px 4px; text-align:right;">$2,195</td>
+            </tr>
+            <tr style="border-bottom:0.5px solid #CDD3D8;">
+              <td style="padding:2.2px 4px; font-weight:600;">Hailey · Blaine</td>
+              <td style="padding:2.2px 3px; text-align:right;">$695k</td>
+              <td style="padding:2.2px 3px; text-align:right; color:var(--big-sky);">+2.3%</td>
+              <td style="padding:2.2px 4px; text-align:right;">$4,120</td>
+            </tr>
+            <tr style="border-bottom:0.5px solid #CDD3D8; background:rgba(61,110,158,0.06);">
+              <td style="padding:2.2px 4px; font-weight:600;">Pocatello</td>
+              <td style="padding:2.2px 3px; text-align:right;">$318k</td>
+              <td style="padding:2.2px 3px; text-align:right; color:var(--slate);">-1.2%</td>
+              <td style="padding:2.2px 4px; text-align:right;">$1,920</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--basalt);">
+              <td style="padding:2.2px 4px; font-weight:600;">Rexburg</td>
+              <td style="padding:2.2px 3px; text-align:right;">$348k</td>
+              <td style="padding:2.2px 3px; text-align:right; color:var(--big-sky);">+0.5%</td>
+              <td style="padding:2.2px 4px; text-align:right;">$2,105</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px; font-family:var(--mono); font-size:6.5px; color:var(--slate);">
+          <span>*Idaho MLS &amp; County Assessor</span>
+          <span>15</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- =====================================================================
+       BOARD 02: CARTOGRAPHIC PUBLICATION & DIGITAL FIELD ECOSYSTEM
+       ===================================================================== -->
+  <div class="board" id="board-2">
+
+    <!-- Top Architectural Header Strip on the Topographic Contour Paper -->
+    <div style="position:absolute; left:44px; right:44px; top:26px; display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid var(--basalt); padding-bottom:10px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <svg width="28" height="31" viewBox="0 0 200 220"><use href="#mark-cplus-primary"/></svg>
+        <span style="font-family:var(--serif); font-size:21px; font-weight:600; color:var(--basalt); letter-spacing:-0.02em;">The Idaho Home Report</span>
+        <span style="color:#CDD3D8;">|</span>
+        <span style="font-family:var(--mono); font-size:10px; font-weight:600; letter-spacing:0.1em; color:var(--big-sky);">02 / DIGITAL PUBLICATION, WEEKLY DISPATCH &amp; NPS UNIGRID MONOGRAPH</span>
+      </div>
+      <div style="font-family:var(--mono); font-size:10px; font-weight:600; letter-spacing:0.08em; color:var(--slate);" class="tnum">
+        44.0682° N, 114.7420° W · 44 COUNTIES
+      </div>
+    </div>
+
+    <!-- MAIN 3-COLUMN EDITORIAL SHOWCASE ON TOPOGRAPHIC CONTOUR CANVAS -->
+    <!-- 1. LEFT: DESKTOP EDITORIAL DATA PUBLICATION (theidahohomereport.org) -->
+    <div style="position:absolute; left:44px; top:84px; width:596px; height:642px; background:var(--white); border:1.5px solid var(--basalt); box-shadow:0 22px 48px rgba(31,42,46,0.12); display:flex; flex-direction:column; overflow:hidden;">
+      <!-- Browser Chrome & Publication Masthead -->
+      <div style="background:var(--basalt); color:var(--snow); padding:7px 14px; display:flex; justify-content:space-between; align-items:center; font-family:var(--mono); font-size:9.5px;">
+        <div style="display:flex; align-items:center; gap:6px;">
+          <span style="width:7px; height:7px; border-radius:50%; background:var(--sunset);"></span>
+          <span style="width:7px; height:7px; border-radius:50%; background:var(--big-sky);"></span>
+          <span style="width:7px; height:7px; border-radius:50%; background:var(--sage);"></span>
+          <span style="margin-left:8px; color:#DCE7F2;">https://theidahohomereport.org/atlas/elevation-vs-price</span>
+        </div>
+        <span style="color:var(--sage);">INDEPENDENT · AD-FREE</span>
+      </div>
+
+      <!-- Editorial Newspaper Masthead inside Web App -->
+      <div style="padding:14px 22px 12px; border-bottom:2px solid var(--basalt); display:flex; justify-content:space-between; align-items:center; background:var(--snow);">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <svg width="36" height="40" viewBox="0 0 200 220"><use href="#mark-cplus-primary"/></svg>
+          <div>
+            <div style="font-family:var(--serif); font-size:23px; font-weight:600; color:var(--basalt); letter-spacing:-0.025em; line-height:1;">The Idaho Home Report</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:14px; font-family:var(--sans); font-size:11px; font-weight:600; color:var(--slate);">
+          <span style="color:var(--big-sky); border-bottom:2px solid var(--sunset); padding-bottom:2px;">44-County Atlas</span>
+          <span>Price &amp; Elevation</span>
+          <span>Payment Calculator</span>
+          <span>Field Guides</span>
+        </div>
+      </div>
+
+      <!-- Lead Story + Real Sawtooth Photography with Cartographic Overlay -->
+      <div style="padding:16px 22px; display:grid; grid-template-columns:1.15fr 0.85fr; gap:18px; border-bottom:1px solid var(--rule);">
+        <div>
+          <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:9px; font-weight:700; color:var(--big-sky); letter-spacing:0.1em; margin-bottom:6px;">
+            <span style="width:7px; height:7px; border-radius:50%; background:var(--sunset);"></span>
+            STATEWIDE DATA INVESTIGATION · Q3
+          </div>
+          <h2 style="font-family:var(--serif); font-size:22px; font-weight:600; line-height:1.15; letter-spacing:-0.02em; color:var(--basalt); margin-bottom:8px;">
+            Where Local Wages Meet the Ridge: Why Magic Valley Price Cuts Are Leading Idaho’s Reset
+          </h2>
+          <p style="font-family:var(--sans); font-size:11.5px; line-height:1.5; color:var(--slate); margin-bottom:12px;">
+            While high-country resort basins above <strong style="color:var(--basalt);">5,000 ft</strong> remain insulated by out-of-state cash, active inventory in Twin Falls and Bonneville counties has climbed <strong style="color:var(--basalt);">+19% YoY</strong>—bringing monthly payments back within reach of local median earners.
+          </p>
+          <!-- 3 Key Benchmark Callouts -->
+          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; border-top:1px solid var(--rule); padding-top:10px;" class="tnum">
+            <div>
+              <div style="font-family:var(--mono); font-size:8.5px; color:var(--slate);">STATE MEDIAN</div>
+              <div style="font-family:var(--serif); font-size:18px; font-weight:600; color:var(--basalt);">$462,500</div>
+              <div style="font-family:var(--sans); font-size:9.5px; font-weight:600; color:var(--big-sky);">+0.4% YoY</div>
+            </div>
+            <div>
+              <div style="font-family:var(--mono); font-size:8.5px; color:var(--slate);">PRICE CUT SHARE</div>
+              <div style="font-family:var(--serif); font-size:18px; font-weight:600; color:var(--sunset);">27.4%</div>
+              <div style="font-family:var(--sans); font-size:9.5px; font-weight:600; color:var(--slate);">3-yr high</div>
+            </div>
+            <div>
+              <div style="font-family:var(--mono); font-size:8.5px; color:var(--slate);">NEEDED INCOME</div>
+              <div style="font-family:var(--serif); font-size:18px; font-weight:600; color:var(--basalt);">$108,400</div>
+              <div style="font-family:var(--sans); font-size:9.5px; font-weight:600; color:var(--sage);">at 6.5% fixed</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Sawtooth Photograph with Topographic Survey Overlay -->
+        <div style="position:relative; border:1px solid var(--basalt); overflow:hidden; background:#1F2A2E;">
+          <img src="assets/idaho_sawtooth_hero.jpg" alt="Sawtooth Range" style="width:100%; height:100%; object-fit:cover; filter:contrast(1.04);" />
+          <!-- Topographic Coordinate Overlay on Photo -->
+          <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(31,42,46,0.25) 0%, rgba(31,42,46,0.05) 45%, rgba(31,42,46,0.78) 100%); padding:10px; display:flex; flex-direction:column; justify-content:space-between; color:var(--snow);">
+            <div style="display:flex; justify-content:space-between; font-family:var(--mono); font-size:8.5px; letter-spacing:0.08em;">
+              <span>SAWTOOTH BASIN</span>
+              <span>44.0682° N</span>
+            </div>
+            <div>
+              <div style="font-family:var(--mono); font-size:8px; color:#DCE7F2; letter-spacing:0.08em;">FIELD PHOTOGRAPH · ELEV. 6,420 FT</div>
+              <div style="font-family:var(--serif); font-size:13px; font-weight:600;">Stanley &amp; Wood River Watershed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- County Explorer Table inside Web App -->
+      <div style="padding:12px 22px; flex:1; background:var(--white);" class="tnum">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <span style="font-family:var(--serif); font-size:14px; font-weight:600; color:var(--basalt);">County-by-County Affordability &amp; Elevation Benchmark</span>
+          <span style="font-family:var(--mono); font-size:9px; color:var(--big-sky); font-weight:600;">UPDATED WEEKLY · Q3</span>
+        </div>
+        <table style="width:100%; border-collapse:collapse; font-family:var(--sans); font-size:11px;">
+          <thead>
+            <tr style="border-bottom:1.5px solid var(--basalt); color:var(--slate); font-size:9.5px; text-transform:uppercase; letter-spacing:0.06em;">
+              <th style="padding:5px 4px; text-align:left;">County &amp; Hub</th>
+              <th style="padding:5px 4px; text-align:right;">Elev.</th>
+              <th style="padding:5px 4px; text-align:right;">Median Price</th>
+              <th style="padding:5px 4px; text-align:right;">YoY Change</th>
+              <th style="padding:5px 4px; text-align:right;">Typical Pmt</th>
+              <th style="padding:5px 4px; text-align:right;">5-Yr Trend</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--mist);">
+              <td style="padding:6.5px 4px; font-weight:700; color:var(--basalt);">Twin Falls County <span style="font-weight:400; color:var(--slate);">· Twin Falls</span></td>
+              <td style="padding:6.5px 4px; text-align:right; color:var(--slate);">3,745 ft</td>
+              <td style="padding:6.5px 4px; text-align:right; font-weight:700;">$379,000</td>
+              <td style="padding:6.5px 4px; text-align:right; font-weight:600; color:var(--big-sky);">-1.8%</td>
+              <td style="padding:6.5px 4px; text-align:right;">$2,290/mo</td>
+              <td style="padding:6.5px 4px; text-align:right;">
+                <svg width="64" height="16" viewBox="0 0 64 16"><polyline points="2,14 16,10 30,5 46,6 60,8" fill="none" stroke="#3D6E9E" stroke-width="2"/><circle cx="60" cy="8" r="2.8" fill="#C2691A"/></svg>
+              </td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--mist); background:var(--snow);">
+              <td style="padding:6.5px 4px; font-weight:700; color:var(--basalt);">Ada County <span style="font-weight:400; color:var(--slate);">· Boise</span></td>
+              <td style="padding:6.5px 4px; text-align:right; color:var(--slate);">2,730 ft</td>
+              <td style="padding:6.5px 4px; text-align:right; font-weight:700;">$518,000</td>
+              <td style="padding:6.5px 4px; text-align:right; font-weight:600; color:var(--slate);">+1.4%</td>
+              <td style="padding:6.5px 4px; text-align:right;">$3,120/mo</td>
+              <td style="padding:6.5px 4px; text-align:right;">
+                <svg width="64" height="16" viewBox="0 0 64 16"><polyline points="2,14 16,9 30,4 46,6 60,5" fill="none" stroke="#3D6E9E" stroke-width="2"/></svg>
+              </td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--mist);">
+              <td style="padding:6.5px 4px; font-weight:700; color:var(--basalt);">Bonneville County <span style="font-weight:400; color:var(--slate);">· Idaho Falls</span></td>
+              <td style="padding:6.5px 4px; text-align:right; color:var(--slate);">4,705 ft</td>
+              <td style="padding:6.5px 4px; text-align:right; font-weight:700;">$364,000</td>
+              <td style="padding:6.5px 4px; text-align:right; font-weight:600; color:var(--big-sky);">-0.6%</td>
+              <td style="padding:6.5px 4px; text-align:right;">$2,195/mo</td>
+              <td style="padding:6.5px 4px; text-align:right;">
+                <svg width="64" height="16" viewBox="0 0 64 16"><polyline points="2,13 16,10 30,6 46,7 60,8" fill="none" stroke="#3D6E9E" stroke-width="2"/></svg>
+              </td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--mist); background:var(--snow);">
+              <td style="padding:6.5px 4px; font-weight:700; color:var(--basalt);">Bonner County <span style="font-weight:400; color:var(--slate);">· Sandpoint</span></td>
+              <td style="padding:6.5px 4px; text-align:right; color:var(--slate);">2,103 ft</td>
+              <td style="padding:6.5px 4px; text-align:right; font-weight:700;">$589,000</td>
+              <td style="padding:6.5px 4px; text-align:right; font-weight:600; color:var(--slate);">+3.1%</td>
+              <td style="padding:6.5px 4px; text-align:right;">$3,540/mo</td>
+              <td style="padding:6.5px 4px; text-align:right;">
+                <svg width="64" height="16" viewBox="0 0 64 16"><polyline points="2,14 16,11 30,6 46,5 60,4" fill="none" stroke="#3D6E9E" stroke-width="2"/></svg>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:6.5px 4px; font-weight:700; color:var(--basalt);">Blaine County <span style="font-weight:400; color:var(--slate);">· Sun Valley</span></td>
+              <td style="padding:6.5px 4px; text-align:right; color:var(--slate);">5,920 ft</td>
+              <td style="padding:6.5px 4px; text-align:right; font-weight:700; color:var(--sunset);">$1,180,000</td>
+              <td style="padding:6.5px 4px; text-align:right; font-weight:600; color:var(--sunset);">+4.6%</td>
+              <td style="padding:6.5px 4px; text-align:right;">$6,890/mo</td>
+              <td style="padding:6.5px 4px; text-align:right;">
+                <svg width="64" height="16" viewBox="0 0 64 16"><polyline points="2,15 16,12 30,7 46,4 60,2" fill="none" stroke="#8A9A7B" stroke-width="2"/><circle cx="60" cy="2" r="2.8" fill="#C2691A"/></svg>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 2. CENTER: MOBILE COUNTY CARD ("Twin Falls County") + "THIS WEEK IN IDAHO" DISPATCH -->
+    <div style="position:absolute; left:664px; top:84px; width:318px; height:642px; display:flex; flex-direction:column; justify-content:space-between;">
+
+      <!-- Top Card: Employer's Exact Sample County Data Card (Twin Falls County) -->
+      <div style="background:var(--white); border:1.5px solid var(--basalt); padding:18px 20px; box-shadow:0 16px 36px rgba(31,42,46,0.10);" class="tnum">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+          <span style="font-family:var(--mono); font-size:9px; font-weight:700; letter-spacing:0.12em; color:var(--big-sky);">COUNTY SNAPSHOT · Q3</span>
+          <span style="font-family:var(--mono); font-size:9px; color:var(--slate);">3,745 FT ELEV.</span>
+        </div>
+        <h3 style="font-family:var(--serif); font-size:23px; font-weight:600; color:var(--basalt); letter-spacing:-0.02em; margin-bottom:2px;">Twin Falls County</h3>
+        <div style="font-family:var(--sans); font-size:11px; color:var(--slate); margin-bottom:12px;">Magic Valley benchmark · Single-family residential</div>
+
+        <div style="display:flex; align-items:baseline; justify-content:space-between; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:10px 0; margin-bottom:12px;">
+          <div>
+            <div style="font-family:var(--mono); font-size:8.5px; color:var(--slate);">MEDIAN SALE PRICE</div>
+            <div style="font-family:var(--serif); font-size:30px; font-weight:600; color:var(--basalt); line-height:1.05;">$379,000</div>
+          </div>
+          <div style="text-align:right;">
+            <span style="display:inline-block; background:var(--big-sky-tint); color:var(--big-sky-dark); font-family:var(--sans); font-size:11px; font-weight:700; padding:3px 8px; border-radius:3px;">-1.8% YoY</span>
+            <div style="font-family:var(--sans); font-size:9.5px; color:var(--slate); margin-top:3px;">42 median days on market</div>
+          </div>
+        </div>
+
+        <!-- 5-Year Trajectory Curve (Big Sky Blue + Single Sunset Orange Current Dot) -->
+        <div style="margin-bottom:10px;">
+          <div style="display:flex; justify-content:space-between; font-family:var(--mono); font-size:8.5px; color:var(--slate); margin-bottom:4px;">
+            <span>5-YEAR MEDIAN TRAJECTORY</span>
+            <span style="color:var(--sunset); font-weight:700;">● CURRENT Q3</span>
+          </div>
+          <svg width="274" height="68" viewBox="0 0 274 68">
+            <line x1="0" y1="16" x2="274" y2="16" stroke="#E8EBEE" stroke-width="1"/>
+            <line x1="0" y1="40" x2="274" y2="40" stroke="#E8EBEE" stroke-width="1"/>
+            <line x1="0" y1="62" x2="274" y2="62" stroke="#CDD3D8" stroke-width="1"/>
+            <path d="M 6 56 C 48 50, 86 32, 132 18 C 168 10, 210 22, 264 26 L 264 62 L 6 62 Z" fill="#DCE7F2" fill-opacity="0.55"/>
+            <path d="M 6 56 C 48 50, 86 32, 132 18 C 168 10, 210 22, 264 26" fill="none" stroke="#3D6E9E" stroke-width="2.6"/>
+            <circle cx="264" cy="26" r="5" fill="#C2691A" stroke="#FFFFFF" stroke-width="1.5"/>
+          </svg>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; background:var(--snow); padding:9px 12px; border:1px solid var(--rule);">
+          <div>
+            <div style="font-family:var(--mono); font-size:8px; color:var(--slate);">TYPICAL PAYMENT</div>
+            <div style="font-family:var(--sans); font-size:13.5px; font-weight:700; color:var(--basalt);">$2,290/mo</div>
+          </div>
+          <div>
+            <div style="font-family:var(--mono); font-size:8px; color:var(--slate);">NEEDED INCOME</div>
+            <div style="font-family:var(--sans); font-size:13.5px; font-weight:700; color:var(--basalt);">$96,000/yr</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Middle Compact Strip: Mortgage Rate & Down-Payment Sensitivity (Fills the vertical rhythm) -->
+      <div style="background:var(--basalt); color:var(--snow); padding:11px 16px; border:1.5px solid var(--basalt); display:flex; justify-content:space-between; align-items:center;" class="tnum">
+        <div>
+          <div style="font-family:var(--mono); font-size:8px; color:#DCE7F2; letter-spacing:0.1em;">PAYMENT ASSUMPTION · Q3</div>
+          <div style="font-family:var(--sans); font-size:11.5px; font-weight:600; color:var(--snow);">20% Down · 6.50% Fixed · Tax &amp; Ins.</div>
+        </div>
+        <span style="font-family:var(--mono); font-size:9px; font-weight:700; color:var(--sunset); border:1px solid var(--sunset); padding:2px 6px;">LIVE MLS</span>
+      </div>
+
+      <!-- Bottom Card: Employer's "This Week in Idaho" Editorial Dispatch -->
+      <div style="background:var(--white); border:1.5px solid var(--basalt); padding:18px 20px; box-shadow:0 16px 36px rgba(31,42,46,0.10);">
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid var(--basalt); padding-bottom:8px; margin-bottom:10px;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <svg width="20" height="22" viewBox="0 0 64 70"><use href="#mark-cplus-mini"/></svg>
+            <span style="font-family:var(--mono); font-size:9.5px; font-weight:700; letter-spacing:0.1em; color:var(--big-sky);">THIS WEEK IN IDAHO</span>
+          </div>
+          <span style="font-family:var(--mono); font-size:8.5px; color:var(--slate);">ISSUE #42</span>
+        </div>
+        <h4 style="font-family:var(--serif); font-size:19px; font-weight:600; line-height:1.18; color:var(--basalt); margin-bottom:8px;">
+          Price cuts hit a 3-year high across the Magic Valley
+        </h4>
+        <p style="font-family:var(--sans); font-size:11.2px; line-height:1.5; color:var(--slate); margin-bottom:12px;">
+          More than one in four listings in Twin Falls and Jerome counties reduced their asking price in October—giving local first-time buyers real negotiating leverage for the first time since 2021.
+        </p>
+        <div style="display:flex; justify-content:space-between; align-items:center; font-family:var(--mono); font-size:9px; font-weight:600; color:var(--basalt); border-top:1px solid var(--rule); padding-top:8px;">
+          <span>READ FULL COUNTY BRIEF →</span>
+          <span style="color:var(--sunset);">● 4 MIN READ</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 3. RIGHT: 1977 NPS UNIGRID PRINT MONOGRAPH COVER (Honoring Employer Top Pick #4) -->
+    <div style="position:absolute; left:1006px; top:84px; width:326px; height:642px; background:var(--snow); border:1.5px solid var(--basalt); box-shadow:0 22px 48px rgba(31,42,46,0.14); display:flex; flex-direction:column; overflow:hidden;">
+
+      <!-- Iconic 1977 Massimo Vignelli NPS Unigrid Black Header Band -->
+      <div style="background:var(--basalt); color:var(--snow); padding:18px 22px 16px; border-bottom:4px solid var(--sunset);">
+        <div style="display:flex; justify-content:space-between; align-items:center; font-family:var(--mono); font-size:8.5px; letter-spacing:0.14em; color:#DCE7F2; margin-bottom:10px;">
+          <span>IDAHO HOUSING DATA MONOGRAPH</span>
+          <span>UNIGRID SERIES · NO. 04</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px;">
+          <svg width="42" height="46" viewBox="0 0 200 220"><use href="#mark-cplus-primary"/></svg>
+          <div style="font-family:var(--serif); font-size:26px; font-weight:600; line-height:0.98; letter-spacing:-0.02em; color:var(--snow);">
+            The Idaho<br/>Home Report
+          </div>
+        </div>
+      </div>
+
+      <!-- Unigrid Swiss Grid Spec Sub-band -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid var(--basalt); font-family:var(--mono); font-size:8.5px; background:var(--mist);">
+        <div style="padding:6px 14px; border-right:1px solid var(--basalt); color:var(--basalt);">
+          <strong>GRID:</strong> 44 COUNTIES · 7 BASINS
+        </div>
+        <div style="padding:6px 14px; color:var(--big-sky); font-weight:700;">
+          44.0682° N, 114.7420° W
+        </div>
+      </div>
+
+      <!-- Monograph Cover Body: Full-Bleed Topographic Relief & Idaho State Cutout Diagram -->
+      <div style="padding:20px 22px; flex:1; display:flex; flex-direction:column; justify-content:space-between; position:relative;">
+        <div>
+          <div style="font-family:var(--mono); font-size:9px; font-weight:700; color:var(--big-sky); letter-spacing:0.1em; margin-bottom:4px;">ANNUAL STATEWIDE EDITION</div>
+          <h3 style="font-family:var(--serif); font-size:22px; font-weight:600; line-height:1.15; color:var(--basalt); margin-bottom:8px;">
+            Home Prices, Local Wages &amp; Watershed Geography
+          </h3>
+          <p style="font-family:var(--sans); font-size:11px; line-height:1.45; color:var(--slate);">
+            A plain-English field guide for Idaho homebuyers, county assessors, and small-town newsrooms.
+          </p>
+        </div>
+
+        <!-- Graphic Centerpiece on Cover: Topographic Idaho Relief Card -->
+        <div style="margin:12px 0; background:var(--basalt); padding:16px; position:relative; border:1px solid var(--basalt);">
+          <svg width="248" height="210" viewBox="0 0 248 210" style="display:block; margin:0 auto;">
+            <!-- Concentric Topographic Contours on Dark Basalt Cover -->
+            <path d="M 10 180 Q 70 120 120 110 Q 180 100 238 140" fill="none" stroke="#3D6E9E" stroke-width="1.5" stroke-opacity="0.55"/>
+            <path d="M 10 155 Q 75 90 125 82 Q 180 74 238 115" fill="none" stroke="#3D6E9E" stroke-width="1.8" stroke-opacity="0.75"/>
+            <path d="M 10 130 Q 80 60 128 54 Q 182 48 238 90" fill="none" stroke="#DCE7F2" stroke-width="1.5" stroke-opacity="0.45"/>
+            <path d="M 24 182 L 116 34 L 218 182 Z" fill="#3D6E9E" fill-opacity="0.28" stroke="#3D6E9E" stroke-width="2"/>
+            <!-- Employer's 36-vertex Idaho Silhouette in crisp Snow White with Sunset Spark -->
+            <g transform="translate(86, 26) scale(1.42)">
+              <path d="M1.8 0.0 L11.7 0.0 L11.7 14.6 L15.0 18.6 L15.0 22.6 L19.2 24.9 L22.7 29.6 L26.7 33.7 L28.9 33.4 L27.5 39.3 L27.7 44.7 L32.0 47.9 L34.2 48.6 L35.2 53.6 L37.7 56.4 L39.7 60.3 L42.3 65.0 L44.0 65.7 L48.5 65.0 L53.8 64.3 L57.6 63.6 L58.5 60.7 L61.8 64.3 L61.8 100.0 L1.9 100.0 L1.9 74.3 L3.0 70.0 L0.0 67.1 L0.2 64.7 L3.7 57.1 L5.3 53.3 L7.6 48.6 L4.4 44.6 L3.0 42.9 L2.4 40.0 L1.8 36.9Z" fill="#F4F5F6" stroke="#1F2A2E" stroke-width="1.5"/>
+              <!-- Boise & Sun Valley Waypoint Dots inside Idaho Map -->
+              <circle cx="14" cy="72" r="4" fill="#3D6E9E" />
+              <circle cx="29" cy="74" r="4.5" fill="#C2691A" />
+              <circle cx="8" cy="14" r="3.5" fill="#3D6E9E" />
+            </g>
+            <text x="12" y="22" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#DCE7F2">ELEVATION CONTOUR INTERVAL: 500 FT</text>
+            <text x="12" y="198" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#C2691A">● SUN VALLEY / WOOD RIVER ($1.18M)</text>
+          </svg>
+        </div>
+
+        <!-- Monograph Footer -->
+        <div style="border-top:1.5px solid var(--basalt); padding-top:8px; display:flex; justify-content:space-between; align-items:center; font-family:var(--mono); font-size:8.5px; color:var(--slate);">
+          <span>BOISE · TWIN FALLS · SANDPOINT</span>
+          <span style="color:var(--basalt); font-weight:700;">FREE PUBLIC DATA</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

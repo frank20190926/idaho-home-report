@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 128" width="540" height="128">
+  <!-- Left High North Peak Wing (#1F2A2E Basalt) -->
+  <path d="M18 108 L18 34 L48 12 L48 108 Z" fill="#1F2A2E"/>
+  <!-- Right Gable Home & Ridgeline Slope (#3D6E9E Big Sky) -->
+  <path d="M48 38 L80 16 L112 46 L112 108 L48 108 Z" fill="#3D6E9E"/>
+  <!-- Crisp White Negative-Space Gable Roofline & Lit Sunset Window Inside -->
+  <path d="M58 68 L80 48 L102 68" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="73" y="72" width="14" height="18" rx="2.5" fill="#C2691A"/>
+  <text x="144" y="55" font-family="'Fraunces', Georgia, serif" font-weight="600" font-size="44" letter-spacing="-0.025em" fill="#1F2A2E">The Idaho</text>
+  <text x="144" y="103" font-family="'Fraunces', Georgia, serif" font-weight="600" font-size="44" letter-spacing="-0.025em" fill="#1F2A2E">Home Report</text>
+</svg>

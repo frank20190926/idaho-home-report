@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 128" width="540" height="128">
+  <!-- Rounded Square Architectural Stamp (#3D6E9E Big Sky) -->
+  <rect x="8" y="8" width="112" height="112" rx="24" fill="#3D6E9E"/>
+  <!-- Subtle Upper Ridge Horizon Shade (#1F2A2E at 22%) -->
+  <path d="M8 32 C8 18.7 18.7 8 32 8 L96 8 C109.3 8 120 18.7 120 32 L120 74 L90 44 L64 70 L42 30 L8 72 Z" fill="#1F2A2E" fill-opacity="0.22"/>
+  <!-- Continuous Single-Weight White Line: One Mountain Peak Flowing Straight Into One Gable Roof -->
+  <path d="M18 76 L42 32 L64 68 L88 44 L110 66" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Gable Home Walls & Base Ground Line -->
+  <path d="M72 60 L72 94 L104 94 L104 60" fill="none" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="20" y1="94" x2="108" y2="94" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round"/>
+  <!-- Single Sunset Spark (#C2691A): Lit Home Window -->
+  <rect x="82" y="67" width="12" height="14" rx="2.5" fill="#C2691A"/>
+  <!-- Clean Editorial Masthead: The Idaho / Home Report -->
+  <text x="144" y="55" font-family="'Fraunces', Georgia, serif" font-weight="600" font-size="44" letter-spacing="-0.025em" fill="#1F2A2E">The Idaho</text>
+  <text x="144" y="103" font-family="'Fraunces', Georgia, serif" font-weight="600" font-size="44" letter-spacing="-0.025em" fill="#1F2A2E">Home Report</text>
+</svg>

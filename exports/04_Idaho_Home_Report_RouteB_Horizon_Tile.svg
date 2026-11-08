@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 128" width="540" height="128">
+  <defs>
+    <clipPath id="clip-b">
+      <rect x="8" y="8" width="112" height="112" rx="24"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-b)">
+    <!-- Sky Ground (#1F2A2E Basalt) -->
+    <rect x="8" y="8" width="112" height="112" fill="#1F2A2E"/>
+    <!-- NPS Unigrid Top Spark Bar (#C2691A) -->
+    <rect x="8" y="8" width="112" height="7" fill="#C2691A"/>
+    <!-- Big Sky Mountain Mass (#3D6E9E) -->
+    <path d="M8 62 L40 28 L66 52 L92 26 L120 54 L120 120 L8 120 Z" fill="#3D6E9E"/>
+    <!-- Crisp Negative-Space White Gable Home Cut Out of the Mountain Base -->
+    <path d="M40 84 L64 60 L88 84 L88 120 L40 120 Z" fill="#FFFFFF"/>
+    <rect x="58" y="86" width="12" height="16" rx="2" fill="#C2691A"/>
+  </g>
+  <text x="144" y="55" font-family="'Fraunces', Georgia, serif" font-weight="600" font-size="44" letter-spacing="-0.025em" fill="#1F2A2E">The Idaho</text>
+  <text x="144" y="103" font-family="'Fraunces', Georgia, serif" font-weight="600" font-size="44" letter-spacing="-0.025em" fill="#1F2A2E">Home Report</text>
+</svg>
